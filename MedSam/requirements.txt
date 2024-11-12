@@ -1,0 +1,8 @@
+torch>=1.10.0
+torchvision
+numpy
+matplotlib
+Pillow
+scikit-image
+natsort
+segment-anything
