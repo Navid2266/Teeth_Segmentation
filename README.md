@@ -47,7 +47,7 @@ Teeth-Segmentation-project/
 │   └── MedSam_model.ipynb  # Main notebook for training the MedSAM model
 ├── SegNet-VGG16/           # Folder containing SegNet model with VGG16 backbone
 │   └── Segnet_model.ipynb  # Main notebook for SegNet model training and segmentation
-├── VGG16/                  # Folder containing VGG16-based U-Net segmentation model
+├── U-Net_VGG16/                  # Folder containing VGG16-based U-Net segmentation model
 │   └── U-Net.ipynb         # Main notebook for U-Net model training and segmentation
 └── README.md               # Project README file
 ```
@@ -56,11 +56,11 @@ Teeth-Segmentation-project/
 
 1. Clone this repository:
     ```bash
-    git clone https://github.com/Navid2266/Teeth-Segmentation-project.git
+    git clone https://github.com/Navid2266/Teeth_Segmentation.git
     ```
 2. Navigate into the project directory:
     ```bash
-    cd Teeth-Segmentation-project
+    cd Teeth_Segmentation
     ```
 3. Install the required dependencies:
     ```bash
@@ -129,6 +129,9 @@ This part contains an implementation of a U-Net model with a VGG16 backbone for 
 
 The model’s segmentation accuracy was 86.9% by the dice score.
 
+![Screenshot](https://github.com/Navid2266/Teeth_Segmentation/raw/main/U-Net_VGG16/Screenshot%202024-11-12%20122711.png)
+![Screenshot](https://github.com/Navid2266/Teeth_Segmentation/raw/main/U-Net_VGG16/Screenshot%202024-11-12%20122739.png)
+
 ## SegNe model
 
 The SegNet model with a VGG16 backbone is designed for teeth segmentation in dental images. By utilizing VGG16's pre-trained layers as an encoder, SegNet effectively captures image features, while its decoder reconstructs the segmentation map for precise tooth boundaries. SegNet is more memory-efficient than U-Net with its encoder-decoder structure but lacks skip connections, making it less precise for highly detailed tasks, as seen in the results.
@@ -145,6 +148,9 @@ The SegNet model with a VGG16 backbone is designed for teeth segmentation in den
 ### Evaluation
 
 The model's average dice score was 80.2% which is 6.7% less than the U-Net model.
+
+![Screenshot](https://github.com/Navid2266/Teeth_Segmentation/raw/main/SegNet-VGG16/Screenshot%202024-11-12%20122621.png)
+
 
 ## Mask R-CNN model
 
