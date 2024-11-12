@@ -27,7 +27,7 @@ Although there are many limitations in accessing public medical datasets, there 
 2. **Helli, S., and A. Hamamcı** shared a dataset that includes original X-ray images and their corresponding ground truth masks for training purposes. This dataset contains 116 instances for each image and its mask [7].
 3. **Wang, X., et al.** also published an X-ray image dataset [8].
 
-For the purpose of training models in this project, all models were primarily tested on the **Helli, S., and A. Hamamcı** dataset, which includes custom ground truth masks for segmentation tasks.
+For the purpose of training models in this project, all models were primarily tested on the **Helli, S., and A. Hamamcı** dataset, which includes custom ground truth masks for segmentation tasks. for testing models download the dataset and locate it in /Data/images.
 
 You can download the dataset used in this project from [LINK](https://data.mendeley.com/datasets/hxt48yk462/1).
 
@@ -98,6 +98,9 @@ For this segmentation task, YOLO annotations were manually defined using makesen
 ### Evaluation
 
 The model’s segmentation accuracy is measured by calculating the Dice score between the binarized model output and the ground truth mask and getting 84.2% accuracy.
+
+![Screenshot](https://github.com/Navid2266/Teeth_Segmentation/raw/main/MedSam/Results/Screenshot%202024-11-09%20125250.png)
+![Screenshot](https://github.com/Navid2266/Teeth_Segmentation/raw/main/MedSam/Results/Screenshot%202024-11-11%20174904.png)
 
 
 ## U-Net Model
