@@ -78,22 +78,40 @@ Teeth-Segmentation-project/
 
 In this part, the MedSAM model to segment teeth from medical images is implemented, enabling further analysis for dental health applications. The code provided requires pre-trained model checkpoints.
 
-For this segmentation task, YOLO annotations were manually defined using makesense.ai, with each annotation fed to the model separately to improve processing speed and avoid interruptions due to overlapping bounds. By leveraging a pre-trained model and the bounding box annotations, the regions corresponding to the teeth in the images are identified. The model's output is then binarized to facilitate comparison with the ground truth mask, allowing the Dice score to be calculated for performance evaluation.
+### Teeth Segmentation using YOLO and MedSam Model
 
-1. Navigate to the `MedSam` folder.
-    ```bash
-    cd MedSam
-    ```
-2. Open `MedSam_model.ipynb` in Jupyter Notebook to access the main model training and segmentation file.
+This repository provides a complete solution for dental image segmentation using a fine-tuned YOLO object detection model and the MedSam model. The process is designed for automatic segmentation of individual teeth, using YOLO for detection and MedSam for detailed segmentation.
 
-3. **Download the Model Checkpoints**  
-   Ensure that the pre-trained MedSAM model checkpoints are downloaded. Uncomment the download line in the script to retrieve the checkpoints automatically.
+### 1. Fine-Tuned YOLO Model for Automatic Segmentation
+The YOLO model has been fine-tuned to automatically detect and segment individual teeth in dental images. This eliminates the need for manual annotation, making the segmentation process faster and more efficient.
 
-4. **Run the Segmentation**  
-   Use the provided code to segment teeth in your dental images. The model takes an input image with manually defined YOLO annotations.
+- The main YOLO object detection model is located in `YOLO-Model.py`.
+- To test the YOLO model, run the `test-yolo.ipynb` notebook. This notebook will evaluate the model's performance in detecting bounding boxes around the teeth.
 
-5. **Annotations**  
-   YOLO annotations were created manually using [makesense.ai](https://www.makesense.ai/) and used for bounding box identification in the segmentation task.
+### 2.Download the Model Checkpoints
+
+Ensure that the pre-trained MedSAM model checkpoints are downloaded. To automatically download the checkpoints, uncomment the relevant line in the script.
+
+### 3.Testing the YOLO Model
+
+If you would like to test only the YOLO model for tooth detection (without segmentation), use the `test-yolo.ipynb` notebook. This will give you the bounding boxes for the detected teeth.
+
+### 4. Automated Segmentation with MedSam
+
+Once the teeth have been detected using YOLO, the MedSam model is used to automatically perform segmentation on each individual tooth. This allows for a fully automated segmentation process.
+
+To use the automated segmentation workflow:
+
+1. Navigate to the `MedSam` folder:
+   ```bash
+   cd MedSam
+
+2. Open and run the `Automated_MedSam.ipynb` notebook to segment the teeth detected by YOLO automatically.
+
+### 5.Using Annotated Files with MedSam
+
+If you already have manually created YOLO annotation files (bounding boxes), you can still use the previous approach for segmentation. In this case, follow the steps below:
+- Run MedSam.ipynb as before to use the YOLO bounding boxes for segmentation.
 
 ### Evaluation
 
