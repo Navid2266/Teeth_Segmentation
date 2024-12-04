@@ -76,7 +76,7 @@ Teeth-Segmentation-project/
 
 ## MedSAM Model
 
-In this part, the MedSAM model to segment teeth from medical images is implemented, enabling further analysis for dental health applications. The code provided requires pre-trained model checkpoints.
+In this part, the MedSAM model to segment teeth from medical images is implemented, enabling further analysis for dental health applications. The code provided requires pre-trained model checkpoints and a new function has been added to ensure compatibility with .dcm (DICOM) files.
 
 ### Teeth Segmentation using YOLO and MedSam Model
 
@@ -110,14 +110,13 @@ To use the automated segmentation workflow:
 
 ### 5.Using Annotated Files with MedSam
 
-If you already have manually created YOLO annotation files (bounding boxes), you can still use the previous approach for segmentation. In this case, follow the steps below:
+If you already have manually created YOLO annotation files (bounding boxes), you can still use the previous approach for segmentation:
 - Run MedSam.ipynb as before to use the YOLO bounding boxes for segmentation.
 
 ### Evaluation
 
 The model’s segmentation accuracy is measured by calculating the Dice score between the binarized model output and the ground truth mask and getting 84.2% accuracy.
 
-![Screenshot](https://github.com/Navid2266/Teeth_Segmentation/raw/main/MedSam/Results/Screenshot%202024-11-09%20125250.png)
 ![Screenshot](https://github.com/Navid2266/Teeth_Segmentation/raw/main/MedSam/Results/Screenshot%202024-11-11%20174904.png)
 
 
